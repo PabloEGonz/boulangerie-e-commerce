@@ -10,10 +10,10 @@ module.exports = {
   theme: {
     colors: {
       'green': '#CCD5AE',
-      'beige': '#E9EDC9',
-      'secondary': '#E9EDC9',
-      'primary': '#D4A373',
-      'clear': '#FAEDCD'
+      'lightgreen': '#E9EDC9',
+      'whitegreen': '#FEFAE0',
+      'brown': '#D4A373',
+      'lightbrown': '#FAEDCD'
     },
     extend: {
       fontFamily: {
