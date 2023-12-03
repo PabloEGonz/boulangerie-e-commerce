@@ -13,7 +13,9 @@ module.exports = {
       'lightgreen': '#E9EDC9',
       'whitegreen': '#FEFAE0',
       'brown': '#D4A373',
-      'lightbrown': '#FAEDCD'
+      'lightbrown': '#FAEDCD',
+      'white': '#FFFFFF',
+      'black': '#000000',
     },
     extend: {
       fontFamily: {
