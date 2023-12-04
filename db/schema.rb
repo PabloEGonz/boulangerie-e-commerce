@@ -15,13 +15,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_03_174506) do
   enable_extension "plpgsql"
 
   create_table "cart_items", force: :cascade do |t|
-    t.bigint "shooping_session_id", null: false
+    t.bigint "shopping_session_id", null: false
     t.bigint "product_id", null: false
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_cart_items_on_product_id"
-    t.index ["shooping_session_id"], name: "index_cart_items_on_shooping_session_id"
+    t.index ["shopping_session_id"], name: "index_cart_items_on_shopping_session_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -57,12 +57,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_03_174506) do
     t.integer "stock"
   end
 
-  create_table "shooping_sessions", force: :cascade do |t|
+  create_table "shopping_sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_shooping_sessions_on_user_id"
+    t.index ["user_id"], name: "index_shopping_sessions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,9 +78,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_03_174506) do
   end
 
   add_foreign_key "cart_items", "products"
-  add_foreign_key "cart_items", "shooping_sessions"
+  add_foreign_key "cart_items", "shopping_sessions"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "payments", "orders"
-  add_foreign_key "shooping_sessions", "users"
+  add_foreign_key "shopping_sessions", "users"
 end
