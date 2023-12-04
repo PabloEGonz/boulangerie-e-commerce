@@ -1,0 +1,23 @@
+<div>
+  <% if user_signed_in? %>
+    <ul class="tabs tabs-bordered">
+      <li class="tab tab-active">Manage Account</li>
+      <li class="tab">My Orders</li>
+      <li class="tab">Billing Info</li>
+    </ul>
+    <div class="row g-3 mt-4">
+      <p class="text-lg"> Welcome <%= current_user.email %>! </p>
+      <div class="col-md-4 mt-4">
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:'btn' %>
+      </div>
+      <div class="col-md-4 mt-4">
+        <%= link_to "Update account info", edit_user_registration_path, class:'btn' %>
+      </div>
+    </div>
+  <% else %>
+    <div class="h2 text-center">You're not logged in, please log into your account or sign in.</div>
+    <div class="my-5 text-center">
+      <%= button_to "Sign in", new_user_session_path, class:'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
