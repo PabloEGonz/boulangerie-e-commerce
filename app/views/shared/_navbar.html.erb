@@ -1,8 +1,10 @@
 <nav class="bg-green">
   <ul class="flex text-xl font-semibold text-white gap-5 p-10">
-    <li>Breads</li>
+    <li><a href="/">Breads</a></li>
     <li>My Cart</li>
     <li>All products</li>
-    <li>Account</li>
+    <% if current_user %>
+      <li><%= link_to  "Account", user_path(current_user.id) %></li>
+    <% end %>
   </ul>
 </nav>
