@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :orders
+  has_one :shopping_session
+  has_many :cart_items, through: :shopping_sessions
+  
 end
