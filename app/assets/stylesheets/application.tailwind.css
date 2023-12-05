@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
+  .btn-custom {
+    @apply py-2 px-4 bg-green border hover:bg-darkgreen border-white active:bg-brown;
+  }
+
+  .input-custom {
+    @apply border-none w-1/4 py-1 px-2;
+  }
+
+  .btn {
+    @apply py-2 px-4 rounded;
+  }
+
   .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+    @apply bg-green;
   }
 }
-
-*/
