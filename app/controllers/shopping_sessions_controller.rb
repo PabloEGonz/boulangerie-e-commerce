@@ -1,13 +1,6 @@
-class ShoopingSessionsController < ApplicationController
-  def create
-    @shopping_session = ShoppingSession.new(current_user.id)
-    @shopping_session.add_attributes(shopping_session_params)
-    @shopping_session.save
-  end
-
-  private
-
-  def shopping_session_params
-    params.require(:shopping_session).permit(:user_id)
+class ShoppingSessionsController < ApplicationController
+  def index 
+    @shopping_session = current_user.shopping_session || ShoppingSession.create(user_id: current_user.id)
+    @cart_items = @shopping_session.cart_items.includes(:product)
   end
 end
