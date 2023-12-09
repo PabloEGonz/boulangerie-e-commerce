@@ -59,7 +59,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_03_174506) do
 
   create_table "shopping_sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "total", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_shopping_sessions_on_user_id"
