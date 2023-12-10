@@ -2,4 +2,8 @@ class ShoppingSession < ApplicationRecord
   belongs_to :user
   has_many :cart_items
   has_many :products, through: :cart_items
+
+  def total 
+    cart_items.to_a.sum { |item| item.total}
+  end
 end
