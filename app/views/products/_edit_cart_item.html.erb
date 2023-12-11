@@ -1,0 +1,17 @@
+<%= form_for @cart_item, url: product_cart_item_path(@product), method: :patch do |form| %>
+  <div class="col-span-3">
+    <p class="my-3 text-lg"><%= @product.description %></p>
+    <p class="text-lg opacity-75">Type: <%= @product.category %></p>
+    <p data-calculator-target="price" class="text-xl font-bold my-2"><%= number_to_currency(@product.price) %></p>
+    <%= form.number_field :product_id, class: "hidden", value: @product.id %>
+    <label for="quantity">Quantity:</label>
+    <div class="flex">
+      <button type="button" data-action="click->calculator#decrement" class="btn-custom">-</button>
+      <%= form.number_field :quantity, data: {calculator_target: "quantity", action:"input->calculator#calculate"}, class:"input-custom", value:@cart_item.quantity, min:"1" %>
+      <button type="button" data-action="click->calculator#increment" class="btn-custom">+</button>
+    </div>
+    <p>On stock: <%= @product.stock %></p>
+  </div>
+  <p>Total: <span data-calculator-target="total"> <%= number_to_currency(@product.price) %></span></p>
+  <%= form.submit "Add to Cart", class:"btn btn-primary" %>
+<% end %>
