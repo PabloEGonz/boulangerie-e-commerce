@@ -7,6 +7,6 @@ class ProductsController < ApplicationController
 
     def show
     @product = Product.find(params[:id])
-    @cart_item = CartItem.new
-    end
+    @cart_item = CartItem.find_by(product_id: @product.id) || CartItem.new
+    end 
 end
