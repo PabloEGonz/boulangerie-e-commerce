@@ -2,21 +2,38 @@
   <h2>Total: 
     <%= number_to_currency(@shopping_session.total) %>
   </h2>
-  <div class="rounded p-5 bg-lightgreen">
+  <table class="rounded lg:p-5 bg-lightgreen lg:w-full lg:border-separate">
+    <tr class="rounded border-whitegreen lg:my-2 border">
+      <th class="lg:px-1 px-1 "></th>
+      <th class="lg:px-3 px-2">Quantity</th>
+      <th class="lg:px-3 px-2">Product</th>
+      <th class="lg:px-3 px-2">Price</th>
+      <th class="lg:px-3 px-2">Total</th>
+      <th class="lg:px-3 px-2"></th>
+    </tr>
     <% @cart_items.each do |item| %>
-      <div class="rounded flex border-whitegreen my-2 justify-around items-center border">
-        <%= image_tag item.product.image, class: "rounded h-10" %>
-        <p>
-          <%= item.product.name %>
-        </p>
-        <p>
-          <%= number_to_currency(item.product.price) %>
-        </p>
-        <%= button_to "Remove", product_cart_item_path(item.product.id, item.id), method: :delete, class: "btn" %>
-      </div>
-    <% end %>
-    <h2 class="text-right pr-5 font-semibold">Total: 
+      <tr class="rounded border-whitegreen lg:px-5 my-2 border">
+        <td class="">
+          <%= image_tag item.product.image, class: "rounded lg:h-10 h-6" %>
+        </td>
+        <td>
+          <%= item.quantity %>
+          <td>
+            <%= item.product.name %>
+          </td>
+          <td>
+            <%= number_to_currency(item.product.price) %>
+          </td>
+          <td>
+            <%= number_to_currency(item.product.price * item.quantity) %>
+          </td>
+          <td>
+            <%= button_to "X", product_cart_item_path(item.product.id, item.id), method: :delete, class: "btn" %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+    <p class="text-right lg:pr-32 pr-14 font-semibold">Total: 
       <%= number_to_currency(@shopping_session.total) %>
-    </h2>
+    </p>
   </div>
-</div>
