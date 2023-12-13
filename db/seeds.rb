@@ -1,12 +1,63 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# sweets
+Product.create!(name: "Chocolate Éclair", price: 3.49, category: "Sweet", stock: 30 , image: "https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2021-02/chocolate-eclair-recipe.jpg", description: "Savor the richness of our chocolate éclair. Crafted with delicate choux pastry, it's filled with a velvety chocolate pastry cream and topped with a glossy chocolate glaze. A perfect harmony of textures and flavors in every bite.")
 
+Product.create!(name: "Assorted Macarons", price: 12.99, category: "Sweet", stock: 30 , image: "https://i.pinimg.com/originals/1d/e1/43/1de143b0a39b51a3fcd2382a8069cb56.jpg", description: "Delight in our assorted macarons, a rainbow of almond meringue cookies with sumptuous fillings. Flavors include pistachio, raspberry, chocolate, and more. These gluten-free treats are a perfect blend of crispiness and creaminess.")
 
-Product.create(name: "French Bread", price: 3, category: "Bread", description: "A long loaf of bread with a crispy crust and soft interior.", image: "https://i2.wp.com/epicureandculture.com/wp-content/uploads/2014/12/shutterstock_172040546.jpg", stock: 10)
-Product.create!(name: "French Bread", price: 4, category: "Bread", description: "A long loaf of bread with a crispy crust and soft interior.", image: "https://i2.wp.com/epicureandculture.com/wp-content/uploads/2014/12/shutterstock_172040546.jpg", stock: 10)
-Product.create!(name: "French Bread", price: 5, category: "Bread", description: "A long loaf of bread with a crispy crust and soft interior.", image: "https://i2.wp.com/epicureandculture.com/wp-content/uploads/2014/12/shutterstock_172040546.jpg", stock: 10)
+Product.create!(name: "Pain au Chocolat", price: 3.99, category: "Sweet", stock: 30 , image: "https://assets.afcdn.com/recipe/20181107/83668_w1024h768c1cx2880cy1920.jpg", description: "Experience the joy of our Pain au Chocolat, a French pastry filled with layers of buttery croissant dough and high-quality chocolate. The golden, flaky exterior gives way to a deliciously gooey chocolate center, making it a breakfast favorite.")
+
+Product.create!(name: "Lemon Madeleine", price: 2.49, category: "Sweet", stock: 30 , image: "https://www.cookinwithmima.com/wp-content/uploads/2018/09/lemon-madeleines-cakes-720x960.jpg", description: "Indulge in the delicate charm of our Lemon Madeleine. These small, shell-shaped sponge cakes are infused with zesty lemon flavor and a hint of vanilla. Light and buttery, they make for the perfect accompaniment to your afternoon tea.")
+
+Product.create!(name: "Tarte Tatin", price: 14.99, category: "Sweet", stock: 30 , image: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1agwoz.img", description: "Fall in love with our Tarte Tatin, a classic French upside-down caramelized apple tart. The buttery puff pastry base cradles a luscious layer of caramelized apples, creating a sweet and comforting dessert perfect for any occasion.")
+
+Product.create!(name: "Chausson aux Pommes", price: 3.79, category: "Sweet", stock: 30 , image: "https://blog.monmagasingeneral.com/wp-content/uploads/2019/01/recette-cuisine-viennoiserie-chaussons-aux-pommes.jpg", description: "Savor the taste of our Chausson aux Pommes, a delightful French pastry filled with spiced apple compote. Encased in flaky puff pastry, these apple turnovers are a perfect combination of sweet and tart, capturing the essence of homemade goodness.")
+
+Product.create!(name: "Millefeuille", price: 15.99, category: "Sweet", stock: 30 , image: "https://www.rustica.fr/images/mille-feuille-pain-epices-l760-h550.jpeg", description: "Experience the elegance of our Millefeuille, a French pastry masterpiece. Layers of crisp puff pastry alternate with velvety pastry cream, creating a delicate balance of textures. Topped with a dusting of powdered sugar, it's a visual and gastronomic delight.")
+
+Product.create!(name: "Palmier", price: 2.49, category: "Sweet", stock: 30 , image: "https://cakebaking.net/wp-content/uploads/2022/03/palmier-recipe-937751.jpg", description: "Crunch into the layers of our Palmier, a sweet and flaky pastry also known as 'elephant ears.' The puff pastry is rolled in sugar, caramelizing as it bakes, resulting in a golden, crispy treat with a satisfyingly sweet crunch.")
+
+Product.create!(name: "Almond Financier", price: 4.29, category: "Sweet", stock: 30 , image: "https://i.pinimg.com/originals/21/93/85/219385c20727d9a061679dc39b567154.jpg", description: "Enjoy the nutty richness of our Almond Financier. These small, rectangular cakes are made with finely ground almonds, giving them a moist and tender texture. The subtle almond flavor makes them a delightful accompaniment to your coffee or tea.")
+
+Product.create!(name: "Brioche aux Raisins", price: 5.49, category: "Sweet", stock: 30 , image: "https://www.simpleetgourmand.fr/wp-content/uploads/pains-aux-raisins-brioches_03.jpg", description: "Indulge in the buttery goodness of our Brioche aux Raisins. This French sweet bread is studded with plump raisins and swirled with a sweet cinnamon filling. Its golden crust and soft, fluffy interior make it a decadent treat for any time of day.")
+
+Product.create!(name: "Paris-Brest", price: 16.99, category: "Sweet", stock: 30 , image: "https://www.cuisinethermomix.com/wp-content/uploads/2019/12/Paris-brest.jpg", description: "Embark on a culinary adventure with our Paris-Brest, a circular choux pastry filled with praline-flavored cream. This iconic dessert, inspired by the Paris-to-Brest bicycle race, is a perfect blend of crisp pastry and velvety filling.")
+
+Product.create!(name: "Religieuse", price: 8.49, category: "Sweet", stock: 30 , image: "https://i.pinimg.com/originals/ce/75/75/ce7575214d5dfcc099fa72a890573b38.jpg", description: "Admire the beauty of our Religieuse, a French pastry resembling a nun's habit. This delightful creation consists of two choux pastry puffs filled with different flavors of pastry cream, stacked and adorned with a fondant glaze. A charming treat for dessert lovers.")
+
+Product.create!(name: "Profiterole", price: 9.99, category: "Sweet", stock: 30 , image: "https://www.joyofbaking.com/images/facebook/profiteroles.jpg", description: "Delight in our Profiterole, a bite-sized choux pastry filled with luscious vanilla ice cream and drizzled with warm chocolate sauce. The combination of the crisp pastry shell and the creamy filling creates a heavenly dessert experience.")
+
+Product.create!(name: "Saint-Honoré", price: 17.99, category: "Sweet", stock: 30 , image: "https://www.denia.com/wp-content/uploads/2016/02/el-saint-honore-sin-duda-el-mas-famoso-pastel-frances-de-obon-pain.jpg", description: "Experience the opulence of our Saint-Honoré, a French pastry named after the patron saint of bakers. This decadent dessert features layers of puff pastry, choux pastry, and caramelized cream puffs, all elegantly adorned with swirls of caramel and Chantilly cream.")
+
+Product.create!(name: "Cannelé", price: 4.79, category: "Sweet", stock: 30 , image: "https://lesyeuxgrognons.com/wp-content/uploads/2018/04/IMG_1979.jpg", description: "Delve into the rich, custardy goodness of our Cannelé. These small, caramelized pastries have a dark, crispy exterior and a soft, custard-like interior with hints of vanilla and rum. Perfect for those who appreciate the contrast of textures and flavors.")
+
+Product.create!(name: "Far Breton", price: 6.99, category: "Sweet", stock: 30 , image: "https://mesdelices.fr/wp-content/uploads/2018/11/far-breton-aux-pruneaux.jpg", description: "Transport yourself to the Brittany region with our Far Breton. This traditional French dessert is a dense, custard-like cake studded with plump prunes or raisins. With a hint of rum, it's a comforting and satisfying treat.")
+
+Product.create!(name: "Cherry Clafoutis", price: 8.99, category: "Sweet", stock: 30 , image: "https://01easylife.com/wp-content/uploads/2019/08/CHERRY-CLAFOUTIS.jpg", description: "Indulge in the rustic charm of our Cherry Clafoutis. This French dessert features fresh cherries baked in a pancake-like batter, creating a custardy and fruit-filled delight. Dust with powdered sugar for a finishing touch.")
+
+Product.create!(name: "Kouign-Amann", price: 10.99, category: "Sweet", stock: 30 , image: "https://www.demotivateur.fr/images-buzz/10888/shutterstock_529274122.jpg", description: "Treat yourself to the irresistible layers of our Kouign-Amann. Hailing from Brittany, this pastry features laminated dough, butter, and sugar, resulting in a caramelized, crispy exterior and a soft, buttery interior. A true indulgence!")
+
+Product.create!(name: "Pâte à Choux", price: 5.99, category: "Sweet", stock: 30 , image: "https://i1.wp.com/zewoc.com/wp-content/uploads/2017/07/cream-puffs-427181_1920.jpg?fit=1200%2C900&ssl=1", description: "Discover the versatility of our Pâte à Choux, the classic French pastry dough. Used to create éclairs, profiteroles, and more, this dough puffs up during baking, creating a hollow interior perfect for filling with pastry cream, ice cream, or whipped cream.")
+
+Product.create!(name: "Tarte aux Fraises", price: 13.99, category: "Sweet", stock: 30 , image: "https://www.quinoaetbasmati.fr/wp-content/uploads/2019/06/tarte3-1-scaled.jpg", description: "Celebrate the sweetness of summer with our Tarte aux Fraises. This French strawberry tart features a buttery pastry crust filled with vanilla pastry cream and topped with fresh, ripe strawberries. A refreshing and elegant dessert for any occasion.")
+
+Product.create!(name: "Gâteau Basque", price: 11.49, category: "Sweet", stock: 25 , image: "https://spanishsabores.com/wp-content/uploads/2020/04/1029861666_54514955b1_c.jpg", description: "Delight in the simplicity of our Gâteau Basque. This traditional Basque cake features a tender almond-flavored pastry filled with either cherry jam or vanilla pastry cream. Each slice is a taste of the Basque Country's rich culinary heritage.")
+
+Product.create!(name: "Pain Perdu", price: 6.49, category: "Sweet", stock: 30 , image: "https://4.bp.blogspot.com/-p_fCGhGjcRg/UZyEsEiRn6I/AAAAAAAAALo/hmqkMFEuWU0/s1600/pain+perdu.JPG", description: "Experience the comfort of our Pain Perdu, also known as French toast. Thick slices of brioche are soaked in a mixture of eggs, milk, and vanilla, then pan-fried to golden perfection. Serve with a dusting of powdered sugar and a drizzle of maple syrup.")
+
+Product.create!(name: "Navette de Marseille", price: 4.29, category: "Sweet", stock: 30 , image: "https://www.cookomix.com/wp-content/uploads/mediapress/members/155146/57698/20190619_155418-800x600.jpg", description: "Taste the tradition of Provence with our Navette de Marseille. These boat-shaped biscuits are flavored with orange blossom water and topped with a light glaze. Enjoy these sweet treats that have been a symbol of Marseille for centuries.")
+
+Product.create!(name: "Bugnes", price: 3.29, category: "Sweet", stock: 30 , image: "https://inspirations-cuisine.fr/wp-content/uploads/2021/02/IMG_7722-1024x768.jpg", description: "Enjoy the carnival spirit with our Bugnes, delicate French fritters. These light and airy pastries are deep-fried to a golden brown and dusted with powdered sugar. A festive treat that brings joy to any occasion.")
+
+Product.create!(name: "Sacristain", price: 5.49, category: "Sweet", stock: 30 , image: "https://cache.marieclaire.fr/data/photo/w1536_ci/1jw/recette-facile-sacristains-sales1.jpg", description: "Savor the twists and turns of our Sacristain, a flaky and twisted puff pastry filled with cinnamon sugar and toasted almonds. The layers of pastry create a delightful crunch, while the filling adds a warm and aromatic touch. Perfect for a sweet indulgence.")
+
+Product.create!(name: "Pet de Nonne", price: 2.79, category: "Sweet", stock: 30 , image: "https://i.notrefamille.com/1400x787/smart/2020/11/26/52361-large.jpg", description: "Delight in the whimsy of our Pet de Nonne, meaning 'Nun's Fart.' These small, deep-fried pastries are light as air and dusted with powdered sugar. Enjoy the simplicity of this classic French treat with a charming name.")
+
+Product.create!(name: "Pain aux Raisins", price: 4.99, category: "Sweet", stock: 30 , image: "https://jlpatisserie.com/wp-content/uploads/edit141of292.jpg", description: "Savor the taste of our Pain aux Raisins, a French pastry filled with plump raisins and vanilla pastry cream. The spiral shape of the pastry is reminiscent of a snail, and each bite is a journey into sweet indulgence.")
+
+# festive
+
+Product.create!(name: "Galette des Rois", price: 18.99, category: "Sweet", stock: 0 , image: "https://recette.supertoinette.com/152330/b/galette-des-rois-au-speculoos.jpg", description: "Celebrate the season with our Galette des Rois, a traditional French puff pastry filled with almond cream. Hidden inside is a special charm or 'feve,' and the one who finds it is crowned the king or queen of the day. A festive treat for Epiphany celebrations!")
+
+Product.create!(name: "Puits d'Amour", price: 7.99, category: "Sweet", stock: 0 , image: "https://islavenue.com/wp-content/uploads/2020/03/Puits-Damour-Mauritius.jpg", description: "Experience the romance of our Puits d'Amour, meaning 'Well of Love.' This French pastry features a puff pastry base filled with vanilla pastry cream and topped with a caramelized sugar crust. Each bite is a journey into sweet indulgence.")
+
+# breads
+Product.create!(name: "Classic Croissant", price: 2.99, category: "Bread", stock: 30 , image: "https://jlpatisserie.com/wp-content/uploads/edit91of292.jpg", description: "Indulge in the simplicity of our classic croissant. Made with layers of flaky pastry and high-quality butter, each bite unveils a light and airy texture. This timeless French pastry is perfect for breakfast or as a delightful snack.")
