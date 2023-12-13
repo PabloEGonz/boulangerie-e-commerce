@@ -15,6 +15,7 @@ module.exports = {
       'whitegreen': '#FEFAE0',
       'brown': '#D4A373',
       'lightbrown': '#FAEDCD',
+      'darkbrown': '#281F17',
       'white': '#FFFFFF',
       'black': '#000000',
     },
