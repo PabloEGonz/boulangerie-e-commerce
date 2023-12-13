@@ -1,0 +1,6 @@
+<li><a href="/">Breads</a></li>
+<li>All products</li>
+<li><%= link_to "My Cart", shopping_sessions_path %></li>
+<% if current_user %>
+  <li><%= link_to  "Account", user_path(current_user.id) %></li>
+<% end %>
