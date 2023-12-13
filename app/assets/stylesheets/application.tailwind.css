@@ -4,7 +4,7 @@
 
 @layer components {
   .btn-custom {
-    @apply py-2 px-4 bg-green border hover:bg-darkgreen border-white active:bg-brown;
+    @apply py-2 px-4 border-white bg-darkgreen hover:bg-darkergreen;
   }
 
   .input-custom {
@@ -16,6 +16,6 @@
   }
 
   .btn-primary {
-    @apply bg-green;
+    @apply bg-darkgreen hover:bg-darkergreen;
   }
 }
