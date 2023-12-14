@@ -1,4 +1,4 @@
-<div class="col-span-3">
+<div class="">
   <p class="my-3 text-lg"><%= @product.description %></p>
   <p class="text-lg opacity-75">Type: <%= @product.category %></p>
   <p data-calculator-target="price" class="text-xl font-bold my-2"><%= number_to_currency(@product.price) %></p>
@@ -12,4 +12,6 @@
   <p>On stock: <%= @product.stock %></p>
 </div>
 <p>Total: <span data-calculator-target="total"> <%= number_to_currency(@product.price) %></span></p>
-<%= form.submit "Add to Cart", class:"btn btn-primary" %>
+<div class="text-center">
+  <%= form.submit "Add to Cart", class:"btn btn-primary" %>
+</div>
