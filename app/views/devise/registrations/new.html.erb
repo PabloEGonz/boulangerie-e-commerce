@@ -6,23 +6,23 @@
 <div class="mt-10">  
   <div class="field">
     <%= f.label :email, class: "label-text" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input input-bordered w-full lg:w-2/5" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input rounded w-full lg:w-2/5" %>
   </div>
   <div class="field">
     <%= f.label :password, class: "label-text" %>
     <% if @minimum_password_length %>
     <em class="label-text opacity-80">(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: "input input-bordered w-full lg:w-2/5" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "input rounded w-full lg:w-2/5" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation, class: "label-text" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input input-bordered w-full lg:w-2/5" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input rounded w-full lg:w-2/5" %>
   </div>
 
   <div class="actions my-3">
-    <%= f.submit "Sign up", class: "btn" %>
+    <%= f.submit "Sign up", class: "btn btn-primary" %>
   </div>
   </div>
 <% end %>
