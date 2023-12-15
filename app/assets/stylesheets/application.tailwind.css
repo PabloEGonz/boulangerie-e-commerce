@@ -12,7 +12,7 @@
   }
 
   .btn {
-    @apply py-2 px-4 rounded inline-block text-center text-white text-sm;
+    @apply py-3 px-6 rounded inline-block text-center text-white text-sm;
   }
 
   .btn-primary {
@@ -21,5 +21,18 @@
 
   .btn-secondary {
     @apply bg-brown hover:bg-darkbrown;
+  }
+
+  .input {
+    @apply rounded;
+  }
+
+  .checkbox {
+    @apply rounded;
+  }
+
+  .link {
+    @apply underline underline-offset-2;
+    color: #2563eb;
   }
 }
