@@ -18,4 +18,8 @@
   .btn-primary {
     @apply bg-darkgreen hover:bg-darkergreen;
   }
+
+  .btn-secondary {
+    @apply bg-brown hover:bg-darkbrown;
+  }
 }
