@@ -19,6 +19,8 @@ module.exports = {
       'darkbrown': '#281F17',
       'white': '#FFFFFF',
       'black': '#000000',
+      'red': '#FF0000',
+      'blue': '#0000FF',
     },
     extend: {
       fontFamily: {
