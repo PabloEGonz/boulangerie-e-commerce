@@ -4,13 +4,15 @@ class CartItemsController < ApplicationController
     @shopping_session = current_user.shopping_session || ShoppingSession.create(user_id: current_user.id)
     @cart_item.shopping_session_id = current_user.shopping_session.id
     @cart_item.save
-    redirect_to "/"
+    redirect_to root_path
+    flash[:notice] = "Item was added to cart"
   end
 
   def update
     @cart_item = CartItem.find_by(product_id: params[:id])
     @cart_item.update(cart_item_params)
-    redirect_to shopping_sessions_path
+    redirect_to root_path
+    flash[:notice] = "Item quantity was updated"
   end
 
   def destroy
