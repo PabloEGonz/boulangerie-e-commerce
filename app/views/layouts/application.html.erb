@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html class="bg-whitegreen">
   <head>
-    <title>BoulangerieECommerce</title>
+    <title>Le Festin Boulangerie</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag asset_path('le-festin') %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-  </head>
-  <body>
-    <%= render "shared/navbar" %>
-    <main class="container pb-10 px-5 lg:px-0 mx-auto mt-28">
-      <%= yield %>
-    </main>
-  </body>
-</html>
+    <body>
+      <%= render "shared/navbar" %>
+      <% flash.each do |type, msg| %>
+        <div class="w-full bg-black text-white text-center font-thin text-xl py-1">
+          <%= msg %>
+        </div>
+      <% end %>
+      <main class="container pb-10 px-6 lg:px-0 mx-auto mt-32">
+        <%= yield %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.turbo.min.js"></script>
+      </main>
+    </body>
+  </html>
