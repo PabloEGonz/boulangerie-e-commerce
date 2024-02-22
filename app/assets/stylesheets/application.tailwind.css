@@ -23,8 +23,16 @@
     @apply bg-brown hover:bg-darkbrown;
   }
 
+  .btn-danger {
+    @apply bg-red hover:bg-darkred;
+  }
+
   .input {
     @apply rounded;
+  }
+
+  .label {
+    @apply text-sm font-semibold;
   }
 
   .checkbox {
