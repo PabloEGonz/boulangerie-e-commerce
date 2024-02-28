@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
     def index
-    @products = Product.all
+    @breads = Product.all.where(category: "Bread")
     if current_user
         @shopping_session = current_user.shopping_session || ShoppingSession.create(user_id: current_user.id)
         @cart_items = @shopping_session.cart_items
