@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show]
   resources :shopping_sessions, only: [:index, :create]
+  get 'all_products', to: 'products#all'
   root 'products#index'
 end
