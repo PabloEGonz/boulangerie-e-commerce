@@ -1,7 +1,14 @@
 :root {
   --lightgreen: #fefae0;
+  --darkbrown: #281f17;
+  --lightbrown: #faedcd;
 }
 
 html {
   background-color: var(--lightgreen) !important;
+}
+
+.scroller {
+  scrollbar-color: var(--darkbrown) whitesmoke;
+  scrollbar-width: thin;
 }
