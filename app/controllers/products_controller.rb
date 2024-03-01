@@ -13,6 +13,6 @@ class ProductsController < ApplicationController
     end
 
     def all
-    @products = Product.all
+        @breads = Product.all.where(category: "Bread")
     end
 end
