@@ -18,6 +18,10 @@
     @apply py-3 px-6 rounded inline-block text-center text-white text-sm;
   }
 
+  .btn-sm {
+    @apply py-2 px-3 rounded inline-block text-center text-white text-xs;
+  }
+
   .btn-primary {
     @apply bg-darkgreen hover:bg-darkergreen;
   }
