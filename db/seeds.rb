@@ -53,9 +53,8 @@ Product.create!(name: "Pain aux Raisins", price: 4.99, category: "Sweet", stock:
 
 # festive
 
-Product.create!(name: "Galette des Rois", price: 18.99, category: "Sweet", stock: 0 , image: "https://recette.supertoinette.com/152330/b/galette-des-rois-au-speculoos.jpg", description: "Celebrate the season with our Galette des Rois, a traditional French puff pastry filled with almond cream. Hidden inside is a special charm or 'feve,' and the one who finds it is crowned the king or queen of the day. A festive treat for Epiphany celebrations!")
-
-Product.create!(name: "Puits d'Amour", price: 7.99, category: "Sweet", stock: 0 , image: "https://islavenue.com/wp-content/uploads/2020/03/Puits-Damour-Mauritius.jpg", description: "Experience the romance of our Puits d'Amour, meaning 'Well of Love.' This French pastry features a puff pastry base filled with vanilla pastry cream and topped with a caramelized sugar crust. Each bite is a journey into sweet indulgence.")
+Product.create!(name: "Galette des Rois", price: 18.99, category: "Seasonal", stock: 0 , image: "https://recette.supertoinette.com/152330/b/galette-des-rois-au-speculoos.jpg", description: "Celebrate the season with our Galette des Rois, a traditional French puff pastry filled with almond cream. Hidden inside is a special charm or 'feve,' and the one who finds it is crowned the king or queen of the day. A festive treat for Epiphany celebrations!")
+Product.create!(name: "Puits d'Amour", price: 7.99, category: "Seasonal", stock: 0 , image: "https://islavenue.com/wp-content/uploads/2020/03/Puits-Damour-Mauritius.jpg", description: "Experience the romance of our Puits d'Amour, meaning 'Well of Love.' This French pastry features a puff pastry base filled with vanilla pastry cream and topped with a caramelized sugar crust. Each bite is a journey into sweet indulgence.")
 
 # breads
 Product.create!(name: "Croissant", price: 2.99, category: "Bread", stock: 30 , image: "https://jlpatisserie.com/wp-content/uploads/edit91of292.jpg", description: "Indulge in the simplicity of our classic croissant. Made with layers of flaky pastry and high-quality butter, each bite unveils a light and airy texture. This timeless French pastry is perfect for breakfast or as a delightful snack.")
