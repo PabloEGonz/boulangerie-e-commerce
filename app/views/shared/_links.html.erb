@@ -1,9 +1,9 @@
-<li><a href="/">Breads</a></li>
-<li><%= link_to "All products", all_products_path %></li>
-<li><%= link_to "My Cart", shopping_sessions_path %></li>
+<li class="nav-link"><a href="/">Breads</a></li>
+<li class="nav-link"><%= link_to "All products", all_products_path %></li>
+<li class="nav-link"><%= link_to "My Cart", shopping_sessions_path %></li>
 <% if current_user %>
-  <li><%= link_to  "Account", user_path(current_user.id) %></li>
-  <li class="lg:relative lg:inline-block hidden">
+  <li class="nav-link"><%= link_to  "Account", user_path(current_user.id) %></li>
+  <li class="lg:relative lg:inline-block hidden nav-link">
     <%= render "shared/cart_icon" %>
   </li>
 <% end %>
