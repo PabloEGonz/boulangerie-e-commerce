@@ -14,5 +14,6 @@ class ProductsController < ApplicationController
 
     def all
         @breads = Product.all.where(category: "Bread")
+        @pastries = Product.all.where(category: "Sweet")
     end
 end
