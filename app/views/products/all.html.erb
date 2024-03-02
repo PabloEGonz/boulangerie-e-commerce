@@ -1,15 +1,21 @@
 <div class="pt-32 px-5 lg:px-10">
-  <h2 class="text-2xl font-bold text-center uppercase py-5">Breads</h2>
-  <div class="flex gap-4 py-5 overflow-auto">
+  <h2 class="text-2xl font-semibold text-center uppercase pt-20">Breads</h2>
+  <div class="flex gap-2 lg:gap-4 py-2 overflow-auto scroller">
     <% @breads.each do |product| %>
-      <div class="p-2 whitespace-nowrap border rounded shadow-xl">
-        <%= image_tag product.image, class: "rounded lg:h-42 h-32 w-80 lg:w-92 lg:object-cover object-center mx-auto" %>
-        <div class="flex gap-2 py-3 lg:py-2 align-center">
-          <h6 class="text-lg lg:text-base"><%= product.name %></h6>
-            <p class="text-sm font-semibold"><%= number_to_currency(product.price) %></p>
-            <%= link_to "Add to cart", product_path(product), class: "btn btn-primary bottom-0" %>
+      <div class="lg:p-2 hover:shadow-xl whitespace-nowrap border rounded shadow">
+        <%= image_tag product.image, class: "lg:rounded lg:h-42 h-32 w-full lg:object-cover object-center" %>
+        <div class="flex gap-2 py-3 px-2 lg:px-0 lg:py-2 align-center">
+          <h6 class="text-base"><%= product.name %></h6>
+          <p class="text-sm font-semibold"><%= number_to_currency(product.price) %></p>
+          <%= link_to "Add to cart", product_path(product), class: "btn-sm lg:btn btn-primary bottom-0" %>
         </div>
       </div>
+    <% end %>
+  </div>
+  <h2 class="text-2xl font-semibold text-center uppercase pt-20">Pastries</h2>
+  <div class="flex gap-3 lg:gap-5 flex-wrap py-2 justify-center">
+    <% @pastries.each do |product| %>
+      <%= render "product_card", product: product %>
     <% end %>
   </div>
 </div>
