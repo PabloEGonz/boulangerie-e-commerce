@@ -1,0 +1,9 @@
+<div>
+  <p class="my-3 text-balance lg:pr-10"><%= @product.description %></p>
+  <p class="text-lg opacity-75">Type: <%= @product.category %></p>
+</div>
+<p class="text-red py-5">This product is currently unavailable. It may be a seasonal item or out of stock.</p>
+<%= link_to "Go Back", :back, class: "btn btn-secondary" %>
+<div class="text-center">
+  <button class="btn bg-darkgreen brightness-50">Add to Cart</button>
+</div>
