@@ -1,11 +1,11 @@
-<div class="text-center pt-36">
+<div class="text-center pt-36 px-0 lg:px-10">
   <h2>Total: 
     <%= number_to_currency(@shopping_session.total) %>
   </h2>
   <table class="rounded lg:p-5 bg-lightgreen lg:w-full lg:border-separate">
     <tr class="rounded border-whitegreen lg:my-2 border">
       <th class="lg:px-1 px-1 "></th>
-      <th class="lg:px-3 px-2">Quantity</th>
+      <th class="lg:px-3 px-2">QTY</th>
       <th class="lg:px-3 px-2">Product</th>
       <th class="lg:px-3 px-2">Price</th>
       <th class="lg:px-3 px-2">Total</th>
@@ -20,13 +20,13 @@
           <%= item.quantity %>
           <td>
             <%= link_to product_path(item.product.id), class: "text-blue font-light" do %>
-            <%= item.product.name %>
+              <%= item.product.name %>
             <% end %>
           </td>
-          <td>
+          <td class="text-sm">
             <%= number_to_currency(item.product.price) %>
           </td>
-          <td>
+          <td class="text-sm">
             <%= number_to_currency(item.product.price * item.quantity) %>
           </td>
           <td>
