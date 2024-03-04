@@ -19,6 +19,7 @@ class CartItemsController < ApplicationController
     @cart_item = CartItem.find(params[:id])
     @cart_item.destroy
     redirect_to shopping_sessions_path
+    flash[:notice] = "Item was removed from cart"
   end
 
   private
