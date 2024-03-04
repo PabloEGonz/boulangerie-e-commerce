@@ -18,4 +18,15 @@
       <%= render "product_card", product: product %>
     <% end %>
   </div>
+  <h2 class="text-2xl font-semibold text-center uppercase pt-20">Seasonal</h2>
+  <div class="flex gap-3 lg:gap-10 lg:px-64 py-5">
+    <% @seasonal.each do |product| %>
+      <%= link_to product_path(product), class: "basis-1/2" do %>
+        <div class="shadow hover:shadow-xl rounded-lg">
+          <%= image_tag product.image, class: "h-auto w-full object-cover rounded-t-lg" %>
+          <h6 class="text-center text-lg"><%= product.name %></h6>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
