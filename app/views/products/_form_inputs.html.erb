@@ -1,5 +1,5 @@
-<div class="">
-  <p class="my-3 text-lg"><%= @product.description %></p>
+<div>
+  <p class="my-3 text-balance lg:pr-10"><%= @product.description %></p>
   <p class="text-lg opacity-75">Type: <%= @product.category %></p>
   <p data-calculator-target="price" class="text-xl font-bold my-2"><%= number_to_currency(@product.price) %></p>
   <%= form.number_field :product_id, class: "hidden", value: @product.id %>
