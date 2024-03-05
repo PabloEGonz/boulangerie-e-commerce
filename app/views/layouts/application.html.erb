@@ -10,9 +10,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <body>
+      <div class="h-28">
       <%= render "shared/navbar" %>
+      </div>
       <% flash.each do |type, msg| %>
-        <div class="w-full bg-black text-white text-center font-thin text-xl py-1">
+        <div class="w-full text-white text-center font-thin <%= "bg-darkergreen" if type === 'notice' %> <%= "bg-darkergreen" if type === 'notice' %>">
           <%= msg %>
         </div>
       <% end %>
@@ -22,3 +24,4 @@
       </main>
     </body>
   </html>
+/
