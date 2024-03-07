@@ -12,3 +12,7 @@ html {
   scrollbar-color: var(--darkbrown) whitesmoke;
   scrollbar-width: thin;
 }
+
+.crediCard.rearIsVsible {
+  transform: rotateY(-180deg);
+}
