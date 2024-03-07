@@ -8,4 +8,7 @@ class ShoppingSessionsController < ApplicationController
       redirect_to new_user_session_path
     end
   end
+  def show
+    
+  end
 end
