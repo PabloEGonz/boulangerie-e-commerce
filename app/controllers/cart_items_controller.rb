@@ -1,4 +1,5 @@
 class CartItemsController < ApplicationController
+  before_action :initialize_shopping_session
   def create
     @cart_item = CartItem.new(cart_item_params)
     @shopping_session = current_user.shopping_session || ShoppingSession.create(user_id: current_user.id)
