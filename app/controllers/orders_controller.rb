@@ -18,8 +18,11 @@ class OrdersController < ApplicationController
 
     def create_order_items
         @items.each do |item|
-           order_item =  OrderItem.create!(order_id: @order.id, product_id: item.product_id)
+           order_item =  OrderItem.create(order_id: @order.id, product_id: item.product_id)
            order_item.save
+           product = Product.find(item.product_id)
+           product.stock -= item.quantity
+           product.save
         end
     end
 end
