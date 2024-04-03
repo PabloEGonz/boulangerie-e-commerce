@@ -1,10 +1,7 @@
 class ProductsController < ApplicationController
+    before_action :check_current_user
     def index
     @breads = Product.all.where(category: "Bread")
-    if current_user
-        @shopping_session = current_user.shopping_session || ShoppingSession.create(user_id: current_user.id)
-        @cart_items = @shopping_session.cart_items
-    end
     end
 
     def show
@@ -16,5 +13,10 @@ class ProductsController < ApplicationController
         @breads = Product.all.where(category: "Bread")
         @pastries = Product.all.where(category: "Sweet")
         @seasonal = Product.all.where(category: "Seasonal")
+    end
+
+    private
+    def check_current_user
+        initialize_shopping_session if current_user
     end
 end
