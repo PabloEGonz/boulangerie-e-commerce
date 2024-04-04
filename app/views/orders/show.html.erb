@@ -1,0 +1,46 @@
+<section  class="py-10 px-5 lg:px-10">
+  <h1 class="text-2xl font-bold text-center uppercase py-5">Order Details</h1>
+  <div class="bg-white border rounded-lg shadow-lg px-6 py-8 max-w-md mx-auto mt-8">
+    <h1 class="font-bold text-2xl my-4 text-center text-blue-600">Le Festin Bakery</h1>
+    <hr class="mb-2">
+    <div class="flex justify-between mb-6">
+      <h1 class="text-lg font-bold">Invoice</h1>
+      <div class="text-darkgray">
+        <div>Date:<%= @order.created_at.to_date %></div>
+        <div>Invoice #: <%= @order.id %></div>
+      </div>
+    </div>
+    <div class="mb-8">
+      <h2 class="text-lg font-bold mb-4">Bill To:</h2>
+      <div class="text-darkgray mb-2"><%= current_user.id %></div>
+      <div class="text-darkgray"><%= current_user.email %></div>
+    </div>
+    <table class="w-full mb-8">
+      <thead>
+        <tr>
+          <th class="text-left font-bold text-darkgray">Description</th>
+          <th class="text-right font-bold text-darkgray">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order_items.each do |item| %>
+          <tr>
+            <td class="text-left text-darkgray"><%= item.quantity %> <%= item.name %></td>
+            <td class="text-right text-darkgray"><%= number_to_currency(item.price) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="text-left font-bold text-darkgray">Total</td>
+          <td class="text-right font-bold text-darkgray"><%= number_to_currency(@order.payment.total) %></td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="text-darkgray mb-2">Thank you for your business!</div>
+    <div class="text-darkgray text-sm">Please remit payment within 30 days.</div>
+  </div>
+  <div>
+    <button>Delete</button>
+  </div>
+</section>
