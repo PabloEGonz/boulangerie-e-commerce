@@ -26,11 +26,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_01_174126) do
 
   create_table "order_items", force: :cascade do |t|
     t.bigint "order_id", null: false
-    t.bigint "product_id", null: false
+    t.integer "quantity"
+    t.decimal "price"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_order_items_on_order_id"
-    t.index ["product_id"], name: "index_order_items_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -86,7 +87,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_01_174126) do
   add_foreign_key "cart_items", "products"
   add_foreign_key "cart_items", "shopping_sessions"
   add_foreign_key "order_items", "orders"
-  add_foreign_key "order_items", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "payments", "orders"
   add_foreign_key "shopping_sessions", "users"
