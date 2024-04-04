@@ -19,6 +19,7 @@ module.exports = {
       'darkbrown': '#281F17',
       'white': '#FFFFFF',
       'gray': '#F2F0EB',
+      'darkgray': '#374151',
       'black': '#000000',
       'red': '#FF0000',
       'darkred': '#8B0000',
