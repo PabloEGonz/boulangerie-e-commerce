@@ -1,49 +1,56 @@
 <div class="text-center pt-36 px-0 lg:px-10">
-  <h2>Total: 
-    <%= number_to_currency(@shopping_session.total) %>
-  </h2>
-  <table class="rounded lg:p-5 bg-lightgreen lg:w-full lg:border-separate">
-    <tr class="rounded border-whitegreen lg:my-2 border">
-      <th class="lg:px-1 px-1 "></th>
-      <th class="lg:px-3 px-2">QTY</th>
-      <th class="lg:px-3 px-2">Product</th>
-      <th class="lg:px-3 px-2">Price</th>
-      <th class="lg:px-3 px-2">Total</th>
-      <th class="lg:px-1 px-1"></th>
-    </tr>
-    <% @cart_items.each do |item| %>
-      <tr class="rounded border-whitegreen lg:px-5 my-2 border">
-        <td>
-          <%= image_tag item.product.image, class: "rounded lg:h-10 h-6" %>
-        </td>
-        <td>
-          <%= item.quantity %>
-          <td>
-            <%= link_to product_path(item.product.id), class: "text-blue font-light" do %>
-              <%= item.product.name %>
-            <% end %>
-          </td>
-          <td class="text-sm">
-            <%= number_to_currency(item.product.price) %>
-          </td>
-          <td class="text-sm">
-            <%= number_to_currency(item.product.price * item.quantity) %>
-          </td>
-          <td>
-            <%= button_to product_cart_item_path(item.product.id, item.id), method: :delete, class: "text-red" do %>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
-              </svg>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
-    </table>
-    <p class="text-right lg:pr-32 pr-14 font-semibold">Total: 
+  <%if @cart_items.count > 0 %>
+    <h2>Total: 
       <%= number_to_currency(@shopping_session.total) %>
-    </p>
-    <div class="flex justify-center">
-      <%= link_to "Checkout", shopping_session_path(@shopping_session), class: "bg-darkergreen text-white font-semibold rounded-md px-4 py-2" %>
-    </div>
+    </h2>
+    <table class="rounded lg:p-5 bg-lightgreen lg:w-full lg:border-separate">
+      <tr class="rounded border-whitegreen lg:my-2 border">
+        <th class="lg:px-1 px-1 "></th>
+        <th class="lg:px-3 px-2">QTY</th>
+        <th class="lg:px-3 px-2">Product</th>
+        <th class="lg:px-3 px-2">Price</th>
+        <th class="lg:px-3 px-2">Total</th>
+        <th class="lg:px-1 px-1"></th>
+      </tr>
+      <% @cart_items.each do |item| %>
+        <tr class="rounded border-whitegreen lg:px-5 my-2 border">
+          <td>
+            <%= image_tag item.product.image, class: "rounded lg:h-10 h-6" %>
+          </td>
+          <td>
+            <%= item.quantity %>
+            <td>
+              <%= link_to product_path(item.product.id), class: "text-blue font-light" do %>
+                <%= item.product.name %>
+              <% end %>
+            </td>
+            <td class="text-sm">
+              <%= number_to_currency(item.product.price) %>
+            </td>
+            <td class="text-sm">
+              <%= number_to_currency(item.product.price * item.quantity) %>
+            </td>
+            <td>
+              <%= button_to product_cart_item_path(item.product.id, item.id), method: :delete, class: "text-red" do %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                  <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                </svg>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+      <p class="text-right lg:pr-32 pr-14 font-semibold">Total: 
+        <%= number_to_currency(@shopping_session.total) %>
+      </p>
+      <div class="flex justify-center">
+        <%= link_to "Checkout", shopping_session_path(@shopping_session), class: "bg-darkergreen text-white font-semibold rounded-md px-4 py-2" %>
+      </div>
+    <% else %>
+      <h2 class="text-xl">Your cart is empty, add products and come back for checkout.</h2>
+      <div class="py-5">
+        <%= link_to "Back to products", all_products_path, class: "btn btn-secondary" %>
+      </div>
+    <% end %>
   </div>
