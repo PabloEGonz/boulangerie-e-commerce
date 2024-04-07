@@ -3,9 +3,10 @@
   <div class="flex flex-col gap-2">
     <% @orders.each do |order| %>
       <%= link_to order_path(order.id) do %>
-        <div class="rounded flex py-2 border border-white w-max justify-center">
-          <p><%= order.created_at.to_date %></p>
+        <div class="rounded flex p-2 bg-green border-2 border-darkgreen justify-center gap-2">
+          <p class="font-bold"> <%= order.created_at.to_date %></p>
           <p>Total: <%= number_to_currency(order.payment.total) %></p>
+          <p>Items: <span class="text-sm font-bold"><%= order.order_items.count %> </span></p>
         </div>
       <% end %>
     <% end %>
