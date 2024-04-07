@@ -1,5 +1,24 @@
-<div class="pt-32 px-5 lg:px-10">
-  <h2 class="text-2xl font-semibold text-center uppercase pt-20">Breads</h2>
+<div class="px-5 lg:px-10">
+  <h2 class="text-2xl font-semibold text-center uppercase pt-10">Cakes</h2>
+  <div class="flex gap-2 lg:gap-4 py-2 overflow-auto scroller">
+    <% @cakes.each do |product| %>
+      <div class="lg:p-2 hover:shadow-xl whitespace-nowrap border rounded shadow">
+        <%= image_tag product.image, class: "lg:rounded lg:h-42 h-32 w-full lg:object-cover object-center" %>
+        <div class="flex gap-2 py-3 px-2 lg:px-0 lg:py-2 align-center">
+          <h6 class="text-base"><%= product.name %></h6>
+          <p class="text-sm font-semibold"><%= number_to_currency(product.price) %></p>
+          <%= link_to "Add to cart", product_path(product), class: "btn-sm lg:btn btn-primary bottom-0" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <h2 class="text-2xl font-semibold text-center uppercase pt-10">Pastries</h2>
+  <div class="flex gap-3 lg:gap-5 flex-wrap py-2 justify-center">
+    <% @pastries.each do |product| %>
+      <%= render "product_card", product: product %>
+    <% end %>
+  </div>
+  <h2 class="text-2xl font-semibold text-center uppercase pt-10">Breads</h2>
   <div class="flex gap-2 lg:gap-4 py-2 overflow-auto scroller">
     <% @breads.each do |product| %>
       <div class="lg:p-2 hover:shadow-xl whitespace-nowrap border rounded shadow">
@@ -12,13 +31,7 @@
       </div>
     <% end %>
   </div>
-  <h2 class="text-2xl font-semibold text-center uppercase pt-20">Pastries</h2>
-  <div class="flex gap-3 lg:gap-5 flex-wrap py-2 justify-center">
-    <% @pastries.each do |product| %>
-      <%= render "product_card", product: product %>
-    <% end %>
-  </div>
-  <h2 class="text-2xl font-semibold text-center uppercase pt-20">Seasonal</h2>
+  <h2 class="text-2xl font-semibold text-center uppercase pt-10">Seasonal</h2>
   <div class="flex gap-3 lg:gap-10 lg:px-64 py-5">
     <% @seasonal.each do |product| %>
       <%= link_to product_path(product), class: "basis-1/2" do %>
