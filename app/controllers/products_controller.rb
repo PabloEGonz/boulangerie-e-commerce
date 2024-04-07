@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
     before_action :check_current_user
     def index
-    @breads = Product.all.where(category: "Bread")
+        get_products
     end
 
     def show
@@ -10,13 +10,18 @@ class ProductsController < ApplicationController
     end
 
     def all
-        @breads = Product.all.where(category: "Bread")
-        @pastries = Product.all.where(category: "Sweet")
+        get_products
         @seasonal = Product.all.where(category: "Seasonal")
     end
 
     private
     def check_current_user
         initialize_shopping_session if current_user
+    end
+
+    def get_products
+        @breads = Product.all.where(category: "Bread")
+        @pastries = Product.all.where(category: "Sweet")
+        @cakes = Product.all.where(category: "Cake")
     end
 end
