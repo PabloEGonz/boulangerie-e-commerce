@@ -3,10 +3,10 @@
     <h3 class="text-2xl font-semibold text-center">Account Info</h3>
     <div class="px-5 lg:px-20 mt-4">
       <p class="text-xl font-light"> Welcome <%= current_user.email %>! </p>
-      <div class="mt-5 flex gap-5">
+      <div class="mt-5 flex flex-col lg:flex-row gap-5">
         <%= link_to "My Orders", orders_path, class:'btn btn-primary'  %>
-        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:'btn btn-danger' %>
         <%= link_to "Update account info", edit_user_registration_path, class:'btn btn-secondary' %>
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:'btn btn-danger' %>
       </div>
     </div>
   <% else %>
